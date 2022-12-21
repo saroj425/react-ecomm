@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Skeleton from "react-loading-skeleton"
+import Navbar from './Navbar';
+import { NavLink } from 'react-router-dom';
 
 
 const Products = () => {
@@ -66,12 +68,12 @@ const Products = () => {
             return(
               <>
                 <div className='col-md-3'>
-                    <div class="card h-100 text-center p-4" key={products.id}>
-                      <img src={products.image} class="card-img-top" alt={products.title} />
+                    <div class="card h-75 text-center p-4" key={products.id}>
+                      <img src={products.image} class="card-img-top h-50" alt={products.title}  style={{heigh:"100px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title mb-0">{products.title.substring(0,12)}...</h5>
-                        <p class="card-text fw-bold">Rs.{products.price}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 className="card-title mb-0">{products.title.substring(0,12)}...</h5>
+                        <p className="card-text fw-bold">Rs.{products.price}</p>
+                        <NavLink to={`/products/${products.id}`} className="btn btn-outline-dark">Buy</NavLink>
                       </div>
                     </div>
                 </div>
@@ -83,6 +85,7 @@ const Products = () => {
     }
   return (
     <div>
+      <Navbar/>
       <div className='container my-5 py-5'>
         <div className='row'>
           <div className='col-md-12 mb-5'>
