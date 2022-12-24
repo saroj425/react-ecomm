@@ -60,7 +60,7 @@ const Product = () => {
     }
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
         <div className='container py-5'>
           <div className='row py-4'>
             {loading ?<Loading/>:<ShowProduct/>}
