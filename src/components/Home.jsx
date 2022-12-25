@@ -4,8 +4,7 @@ import Navbar from './Navbar'
 
 const Home = () => {
   return (
-    <>
-    <Navbar/> 
+    <> 
     <div className='hero'>
         <div class="card bg-dark text-white">
             <img src="/assets/bg.jpg" class="card-img" alt="..." height="550px"/>
